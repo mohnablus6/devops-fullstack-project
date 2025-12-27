@@ -9,7 +9,7 @@ app.use(express.json());
 
 // ================= DATABASE =================
 // server.js موجود في /app
-const DB_PATH = path.join(__dirname, 'database.json');
+const DB_PATH = process.env.DB_PATH || "/app/data/database.json";
 
 // ================= API =================
 app.get('/products', (req, res) => {
